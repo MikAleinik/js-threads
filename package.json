@@ -1,0 +1,14 @@
+{
+    "name": "rs-check",
+    "version": "1.0.0",
+    "description": "",
+    "main": "tasks.js",
+    "scripts": {
+        "start": "node ./tasks.js"
+    },
+    "author": "MikAleinik",
+    "license": "MIT",
+    "devDependencies": {
+      "chalk": "^4.1.2"
+    }
+}

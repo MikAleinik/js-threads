@@ -1,38 +1,26 @@
-const infinityLoopCheckerSync = require('./time-checker');
-
-function firstTask() {
-  const res = [0, 1, 2];
-  for (let i = 0; i < 10; i += 1) {
-    res[0] = i;
-  }
-  return res;
+/**
+ * @param {number} num
+ * @param {number} num2
+ * @returns
+ */
+function summTask(num, num2) {
+    const res = num + num2;
+    return res;
 }
 
-function secondTask() {
-  const res = [3, 4, 5];
-  for (let i = 0; i < 1000; i += 1) {
-    res[0] = i;
-  }
-  return res;
+function notImplementedTask() {
+    throw new Error('Not implemented');
 }
 
-function infinityTask() {
-  const res = [6, 7, 8];
-  for (let i = 0; i < 1000; i += 1) {
-    res[0] = i;
-    i -= 1;
-  }
-  return res;
+function infinityLoopTask() {
+    for (let i = 0; i < 10; i += 1) {
+        i -= 1;
+    }
+    return res;
 }
 
-const time = 1000;
-
-infinityLoopCheckerSync(firstTask, time).then((result) =>
-  console.log('firstTask result = ', result)
-);
-infinityLoopCheckerSync(secondTask, time).then((result) =>
-  console.log('secondTask result = ', result)
-);
-infinityLoopCheckerSync(infinityTask, time).then((result) =>
-  console.log('infinityTask result = ', result)
-);
+module.exports = {
+    summTask,
+    notImplementedTask,
+    infinityLoopTask,
+};

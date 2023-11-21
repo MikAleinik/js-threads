@@ -1,3 +1,3 @@
 # js-threads
-npm i
+npm i<br>
 npm node index.js
